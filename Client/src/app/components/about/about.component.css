@@ -1,0 +1,125 @@
+.introBannerHolder {
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+  font-size: larger;
+  font-weight: 500;
+}
+.introBannerHolder .headingIV {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+.breadCrumbs a {
+  color: #707070;
+  display: block;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.breadCrumbs a:hover {
+  color: var(--main-color);
+}
+.active {
+  color: var(--main-color);
+}
+.content-cont h2 {
+  text-align: start;
+  max-width: 300px;
+  font-family: "playfair display", serif;
+  font-weight: bold;
+  position: relative;
+}
+.content-cont h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25%;
+  height: 3px;
+  background-color: var(--third-color);
+}
+.content-cont p {
+  text-align: start;
+  max-width: 500px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.counterSec {
+  font-size: larger;
+  color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.counterSec .counter {
+  font-size: 50px;
+  margin-bottom: 0 !important;
+}
+.counterSec ul li {
+  position: relative;
+  width: 200px;
+}
+.counterSec ul li:not(:last-child)::after {
+  content: "";
+  background-color: #adacac;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 14.5rem;
+}
+.counterSec ul li strong:nth-child(2) {
+  font-weight: 400;
+  opacity: 0.7;
+}
+.sep-img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 50px;
+}
+.delivery-content .stepCol {
+    width: 429px;
+    font-size: medium;
+    text-align: start;
+    padding-inline: 20px;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.03);
+}
+.stepCol .mainTitle {
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+    max-width: 109px;
+    background: #5ba515;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.stepCol .headingV{
+    font-size: 15px;
+    line-height: 18px;
+    color: #444444;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.stepCol p{
+    color: #6d6d6d;
+}
+.stepCol:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 0 9px 15px;
+    border-color: transparent transparent transparent #f8f8f8;
+}
+.delivery-content{
+    width: 75%;
+    margin: 0 auto;
+}
+.delivery-content .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.delivery h2{
+    font-family: "playfair display", serif;
+}
+.float-right{
+    float: right !important;
+}

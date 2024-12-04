@@ -1,0 +1,12 @@
+.container{
+    padding-block: 4rem;
+}
+.partner{
+    width: 195px;
+    height: 70px;
+    position: relative;
+}
+.sep-img{
+    width: 300px;
+    height: auto;
+}

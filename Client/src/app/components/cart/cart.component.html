@@ -1,0 +1,80 @@
+<div class="cart-layout">
+  <div class="cart-content d-flex p-3">
+    <div class="d-flex flex-column w-100 align-items-center">
+      <div class="d-flex justify-content-between flex-row w-100">
+        <h4>Shopping Cart</h4>
+        <button class="reset-btn" (click)="closeCart()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <hr class="sep" />
+    </div>
+    <div class="cart-items d-flex flex-column justify-content-start h-100">
+      @if(cartProducts.length == 0){
+      <h6 class="text-center">Your cart is empty</h6>
+      }@else {
+      <ng-container *ngFor="let product of cartProducts">
+        <div class="cart-item d-flex w-100 justify-content-between gap-2">
+          <div class="img-container me-3">
+            <img
+              src="http://localhost:3000/uploads/{{product.product.imageURL}}"
+              alt="Product in Cart"
+              class="img-fluid"
+              width="60"
+              height="60"
+            />
+          </div>
+          <div class="product-details">
+            <h5 class="product-title">{{ product.product.title }}</h5>
+            <div class="conterollers d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn control me-2"
+                (click)="decreaseQty(product.product._id)"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                [value]="product.reqQty"
+                name="quantity"
+                id="quantity"
+                required
+              />
+              <button
+                type="button"
+                class="btn control ms-2"
+                (click)="increaseQty(product.product)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="btn control"
+              (click)="removeFromCart(product.product._id)"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <p>{{ product.price | currency:'USD':'symbol':'1.1-1' }}</p>
+          </div>
+        </div>
+        <hr />
+      </ng-container>
+      }
+    </div>
+    <button *ngIf="cartProducts.length == 0" type="button" class="btn" (click) = "closeCart()">
+      Continue Shopping
+    </button>
+    <ng-container *ngIf="cartProducts.length != 0">
+      <div class="cart-total d-flex w-100 justify-content-between gap-2">
+        <h5>Subtotal:</h5>
+        <p>{{ cartTotalPrice | currency }}</p>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="checkout()">Checkout</button>
+    </ng-container>
+  </div>
+</div>
+<div class="overlay" (click)="closeCart()"></div>

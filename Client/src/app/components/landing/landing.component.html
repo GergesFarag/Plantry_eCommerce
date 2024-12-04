@@ -1,0 +1,12 @@
+<div class="position-relative d-flex overflow-hidden p-5 p-md-5 m-md-3 text-center content">
+    <div class="col-md-7 p-lg-5 mx-auto my-5">
+        <h1 class="display-3 fw-bold">Plants Gonna Make People Happy.</h1>
+        <div class="d-flex justify-content-center p-3">
+            <button class="btn fs-4 fw-medium mx-3 hoverable position-relative px-0" routerLink="store">Shop Now</button>
+            <button class="btn fs-4 fw-medium mx-3 hoverable position-relative px-0" routerLink="about">Learn More</button>
+        </div>
+    </div>
+    <div class="img-cont col-md-5 p-5">
+        <img [src]="currentIMG" alt="plant_image" class="land-img" [class.fade] = "isfade">
+    </div>
+</div>

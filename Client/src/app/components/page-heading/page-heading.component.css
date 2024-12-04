@@ -1,0 +1,23 @@
+.introBannerHolder {
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    font-size: larger;
+    font-weight: 500;
+  }
+  .introBannerHolder .headingIV {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+  }
+  .breadCrumbs a {
+    color: #707070;
+    display: block;
+    text-decoration: none;
+    transition: 0.5s ease;
+  }
+  .breadCrumbs a:hover {
+    color: var(--main-color);
+  }
+  .active {
+    color: var(--main-color);
+  }

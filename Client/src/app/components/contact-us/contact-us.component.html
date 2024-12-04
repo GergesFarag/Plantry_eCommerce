@@ -1,0 +1,67 @@
+<app-page-heading pageName="Contact Us"></app-page-heading>
+<section class="container contact-container position-relative">
+  <div class="row"></div>
+  <div class="d-flex justify-content-center align-items-center mb-5 py-3">
+    <div class="left-content w-50">
+      <h3 class="fs-1 position-relavite">
+        If you have any questions<br />
+        please feel free to <span>" get in touch "</span> with us, we’ll get back to you shortly.
+      </h3>
+    </div>
+    <div class="right-content">
+      <form>
+        <div class="name-container">
+          <div class="form-field p-0 me-5">
+            <label for="name" class="d-block">First Name</label>
+            <input type="text" id="fname" name="fname" required />
+          </div>
+          <div class="form-field p-0">
+            <label for="name" class="d-block">Last Name</label>
+            <input type="text" id="lname" name="lname" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Leave Your Meassage Here..."
+          ></textarea>
+        </div>
+        <button type="button" class="btn">Send</button>
+      </form>
+    </div>
+  </div>
+  <div class="bottom-container pb-4">
+    <h2 class="px-3">Useful Links</h2>
+    <div class="img-fluid">
+      <img src="imgs/sep.png" alt="separator" class="sep-img" />
+    </div>
+    <div
+      class="bottom-content d-flex justify-content-around align-items-center gap-3"
+    >
+      <div class="item p-4">
+        <i class="fa-solid fa-handshake icon mb-3"></i>
+        <h4>Partnerships</h4>
+        <p>Join our partnerships</p>
+        <button type="button" class="btn">Join now</button>
+      </div>
+      <div class="item p-4">
+        <i class="fa-solid fa-question icon mb-3"></i>
+        <h4>FAQ</h4>
+        <p>Most questions can be answered here.</p>
+        <button type="button" class="btn">Learn more</button>
+      </div>
+      <div class="item p-4">
+        <i class="fa-solid fa-location-dot icon mb-3"></i>
+        <h4>Store Locations</h4>
+        <p>Find your nearest Electric Scooter store.</p>
+        <button type="button" class="btn">Explore now</button>
+      </div>
+    </div>
+  </div>
+</section>

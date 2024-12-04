@@ -1,0 +1,30 @@
+.right-content {
+    height: inherit;
+    padding: 25px;
+    position: relative;
+}
+.image-bg{
+    background-image: url("/imgs/back2.jpg");
+    height:100%;
+    width: 100%;
+    background-size: cover;
+    opacity: 0.5;
+}
+.btn{
+    background-color: var(--sec-color);
+    color:white
+}
+.right-text{
+    position: absolute;
+    top:50%;
+    width: 350px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.right-content h2{
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    background-color: var(--sec-color);
+    color: white;
+    transform: skewX(-7deg);
+}

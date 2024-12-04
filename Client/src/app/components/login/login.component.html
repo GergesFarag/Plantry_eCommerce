@@ -1,0 +1,66 @@
+<div class="container p-5">
+  <div class="row my-5">
+    <section class="left-content p-5 text-start col-sm-12 col-md-6">
+      <h3>login</h3>
+      <form #myForm="ngForm">
+        <div class="my-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            aria-describedby="emailHelpId"
+            placeholder="abc@mail.com"
+            #email="ngModel"
+            ngModel
+            required
+          />
+          <p class="text-danger" *ngIf="email.control.touched && email.invalid">
+            *Email is required
+          </p>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="Type your password here"
+            #password="ngModel"
+            ngModel
+            required
+          />
+          <p class="text-danger" *ngIf="password.control.touched && password.invalid">
+            *Password is required
+          </p>
+        </div>
+        <p class="text-danger" *ngIf="failedMSG">Email or Password is incorrect</p>
+        <button
+          name="submit"
+          id="submit"
+          class="form-control btn my-3"
+          type="submit"
+          (click)="login(email.value, password.value)"
+          [disabled]="myForm.invalid"
+        >
+          Login
+        </button>
+        <p>You don't have an account ? <a routerLink="/signup">Sign up</a></p>
+      </form>
+    </section>
+    <section class="right-content col-sm-12 col-md-6">
+      <div class="img-fluid image-bg p-5"></div>
+      <div class="right-text">
+        <h2>Welcome to your imaginary world</h2>
+        <p>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+          asperiores consequuntur cupiditate nihil quos illo doloremque officia
+          architecto quod iure pariatur suscipit voluptatem nobis explicabo? Sit
+          nesciunt quas dolorem dolor"
+        </p>
+      </div>
+    </section>
+  </div>
+</div>

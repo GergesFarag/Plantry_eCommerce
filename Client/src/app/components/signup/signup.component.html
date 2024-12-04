@@ -1,0 +1,115 @@
+<div class="container p-3">
+  <div class="row my-3">
+    <section class="left-content p-5 text-start col-sm-12 col-md-6">
+      <h3>Sign up</h3>
+      <form (submit)="signup($event)" #myForm="ngForm">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            id="username"
+            aria-describedby="helpId"
+            placeholder="Type your username"
+            required
+            #username="ngModel"
+            pattern="^[A-Za-z][A-Za-z0-9]{2,}$"
+            [(ngModel)]="newUser.username"
+          />
+          <p
+            class="text-danger"
+            *ngIf="username.touched && username.errors?.['pattern']"
+          >
+            Username must start with character and at least 3 characters
+          </p>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            aria-describedby="emailHelpId"
+            placeholder="abc@mail.com"
+            required
+            [(ngModel)]="newUser.email"
+            #email="ngModel"
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          />
+          <div
+            class="dangers text-danger"
+            *ngIf="email.touched && email.invalid"
+          >
+            <p *ngIf="email.errors?.['required']">*Email is required</p>
+            <p *ngIf="email.errors?.['pattern']">
+              *Email must contain &#64; and domain name
+            </p>
+          </div>
+          <p></p>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="Type strong password here"
+            required
+            pattern="^(?=.*[A-Z])(?=.*\d).{6,}$"
+            [(ngModel)]="newUser.password"
+            #password="ngModel"
+          />
+          <div class="text-danger" *ngIf="password.touched && password.invalid">
+            <p *ngIf="password.errors?.['pattern']">
+              *Password must be at least 6 characters with uppercase and one
+              digit
+            </p>
+            <p *ngIf="password.errors?.['required']">*Password is required</p>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="retypePassword" class="form-label">Re-type Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Re-type Password"
+            name="retypePassword"
+            id="retypePassword"
+            ngModel
+            #retypePassword="ngModel"
+            required
+            [pattern]="password.value"
+          />
+          <div
+            class="text-danger"
+            *ngIf="retypePassword.invalid && retypePassword.touched"
+          >
+            <span *ngIf="retypePassword.errors?.['required']"
+              >*retypePassword required</span
+            >
+            <span *ngIf="retypePassword.errors?.['pattern']"
+              >*retyped password doesn't match</span
+            >
+          </div>
+        </div>
+        <button [disabled]="myForm.invalid" class="form-control btn">Sign up</button>
+      </form>
+      <p class="mt-3">You have already an account ? <a routerLink="/login">Login</a></p>
+    </section>
+    <section class="right-content col-sm-12 col-md-6">
+      <div class="img-fluid image-bg p-5"></div>
+      <div class="right-text">
+        <h2>Welcome to your imaginary world</h2>
+        <p>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+          asperiores consequuntur cupiditate nihil quos illo doloremque officia
+          architecto quod iure pariatur suscipit voluptatem nobis explicabo? Sit
+          nesciunt quas dolorem dolor"
+        </p>
+      </div>
+    </section>
+  </div>
+</div>

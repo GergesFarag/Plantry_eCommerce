@@ -1,0 +1,26 @@
+.container{
+    padding: 20px;
+}
+h4{
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7);
+}
+p,h6{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+}
+.btn-cont{
+    width: 280px;
+}
+.btn-cont button{
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #eee;
+    transition: 0.5s ease;
+}
+.btn-cont button:hover{
+    background-color: white;
+    color: var(--main-color)
+}

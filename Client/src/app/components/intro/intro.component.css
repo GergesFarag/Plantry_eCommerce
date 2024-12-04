@@ -1,0 +1,38 @@
+.intro-title{
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    position: relative;
+    margin-block: 2rem;
+    text-align: start;
+}
+.intro-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25%;
+    height: 4px;
+    border-radius: 20px;
+    background-color: var(--third-color);
+}
+.light-text{
+    text-align: start;
+    width: 75%;
+    color: rgba(0, 0, 0 , 0.5);
+    font-size: 0.9rem;
+}
+.lorem.light-text{
+    font-size: 1rem;
+}
+.row.dic{
+    background-color: beige;
+}
+.right-icon{
+    font-size: 2rem;
+}
+.right-icon .icon{
+    color: var(--main-color);
+}
+.lcont{
+    font-size: small;
+}

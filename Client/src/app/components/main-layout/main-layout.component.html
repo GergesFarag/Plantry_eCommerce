@@ -1,0 +1,19 @@
+@if (isLandingPage) {
+<div class="header-landing-wrapper" [ngStyle]="{ backgroundImage: myBG }">
+  <app-cart></app-cart>
+  <div class="container text-center">
+    <app-header></app-header>
+    <app-landing></app-landing>
+  </div>
+</div>
+}
+<div class="text-center">
+  @if(!isLandingPage){
+  <app-cart></app-cart>
+  <div class="container text-center">
+    <app-header></app-header>
+  </div>
+  }
+  <router-outlet></router-outlet>
+</div>
+<app-footer *ngIf="!isLoginPage"></app-footer>

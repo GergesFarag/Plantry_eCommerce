@@ -1,0 +1,117 @@
+::selection{
+   background-color: var(--sec-color);
+}
+.contact-container{
+    overflow: hidden;
+}
+.contact-container::before{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 1000px;
+    width: 1000px;
+    top:-100%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.05;
+}
+.contact-container h3{
+    color: var(--sec-color);
+    font-family: "playfair display", serif;
+    width: 50%;
+    padding: 20px;
+    border: 4px solid;
+    box-shadow: 10px 10px;
+}
+.right-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.right-content form *{
+    width: 100%;
+    text-align: start;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+.right-content form * , .right-content form *:focus{
+    border: none;
+    outline: none;
+}
+.right-content form *:focus{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.name-container{
+    display: flex;
+}
+.form-field{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+textarea#message{
+    height: 300px;
+    padding:5px;
+    resize: none;
+}
+input , select, textarea{
+    background-color: rgba(238, 238, 238 , 0.5);
+}
+label{
+    color: var(--sec-color);
+}
+.btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: white;
+    transition: 0.5s ease;
+    width: 150px !important;
+    text-align: center !important;
+}
+.btn:hover{
+    background-color: var(--sec-color);
+}
+.bottom-container{
+    font-family: "Playfair Display", serif;
+}
+.bottom-container .item .icon{
+    font-size: 50px !important;
+    color: var(--main-color);
+    transition: 0.5s ease;
+}
+.bottom-container .item{
+    margin-block: 20px;
+    width: 30%;
+}
+.bottom-container .item .icon:hover{
+    color: var(--sec-color);
+}
+.bottom-container .item .btn{
+    background-color: var(--main-color);
+}
+.bottom-container .item .btn:hover{
+    background-color: var(--sec-color);
+    color: white;
+}
+h4 , h4+p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0,0.7);
+}
+h4+p{
+    font-weight: normal;
+    margin: 0;
+}
+h3 span{
+    text-transform: uppercase;
+    font-size: larger;
+    color: var(--main-color);
+}

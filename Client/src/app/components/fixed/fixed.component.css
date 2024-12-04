@@ -1,0 +1,23 @@
+.container{
+    padding: 4rem 2rem;
+    position: relative;
+}
+.content{
+    position: absolute;
+    top:150px;
+    left:150px;
+    color: rgba(0, 0, 0, 0.5);
+}
+h3{
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+}
+.fixed-img{
+    background-image: url("/imgs/fixed.jpeg");
+    background-attachment: fixed;
+    height: 400px;
+    background-size: cover;
+}
+

@@ -1,0 +1,62 @@
+<div class="container mb-5">
+  <div class="bg-body-tertiary p-5 rounded d-flex flex-wrap mx-5 mt-5">
+    <div class="img-cont overflow-hidden">
+      <img
+        src="http://localhost:3000/uploads/{{instanceProduct?.imageURL}}"
+        alt="productImage"
+        class="img-fluid"
+      />
+    </div>
+    <div class="productContent d-flex flex-column align-items-start ms-4">
+      <h1 class="title">{{ instanceProduct?.title }}</h1>
+      <p class="lead text-start">
+        {{ instanceProduct?.description }}
+      </p>
+      <p class="qty">
+        Available Quantity: <strong>{{ instanceProduct?.quantity }}</strong>
+      </p>
+      <p class="price">Price: {{ instanceProduct?.price | currency:'USD':'symbol':'1.1-1' }}</p>
+      @if(isUserLoggedIn && !isAdmin){
+        @if(instanceProduct?.quantity != 0){
+          <button
+            type="button"
+            class="btn"
+            (click)="addToCart()"
+          >Add To Cart
+          </button>
+        }@else {
+          <p class="text-danger">This product is currently out of stock.</p>
+          <button type="button" class="btn unlogged-btn" disabled>
+            Add To Cart
+          </button>
+        }
+      }@else if (isAdmin) {}
+       @else {
+        <button type="button" class="btn unlogged-btn" routerLink="/login">
+          Login to Add To Cart
+        </button>
+      }
+    </div>
+  </div>
+  <div
+    class="navigation-buttons bg-body-tertiary d-flex justify-content-between mx-5 mb-5 mt-2"
+  >
+    <button
+      class="btn"
+      (click)="getPreviousProduct(instanceProduct!._id)"
+      [disabled]="currentProductIndex == 0"
+    >
+      <i class="fa-solid fa-arrow-left"></i> Previous
+    </button>
+    <button class="btn" (click)="backToStore()">
+      <i class="fa-solid fa-store"></i> Back to Store
+    </button>
+    <button
+      class="btn"
+      (click)="getNextProduct(instanceProduct!._id)"
+      [disabled]="currentProductIndex == +productsIds.length - 1"
+    >
+      Next <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</div>

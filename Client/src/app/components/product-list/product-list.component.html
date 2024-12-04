@@ -1,0 +1,42 @@
+<div class="container text-center py-5">
+    <div class="row g-5">
+      @if(!recievedProducts || recievedProducts.length == 0){
+        <h2>No Products Found</h2>
+      } @else {
+        <ng-container *ngFor="let product of recievedProducts">
+          <ng-container *ngIf="!product.isDeleted">
+            <div class="col-md-3">
+              <div class="card shadow-sm" [ngClass]="{'featured' : product.isFeatured}">
+                <div class="img-content">
+                  <img [src]="'http://localhost:3000/uploads/' + product.imageURL" alt="productImage" class="img-fluid" />
+                  <div class="img-control">
+                    @if (isAdmin) {
+                      <button (click)="deleteProduct(product._id)"><i class="fa-solid fa-trash"></i></button>
+                      <button routerLink="/updateProduct/{{product._id}}"><i class="fa-solid fa-pen-to-square"></i></button>
+                    }@else {
+                      <button><i class="fa-regular fa-heart"></i></button>
+                      <button (click)="addToCart(product)" *ngIf="product.quantity != 0"><i class="fa-solid fa-cart-shopping" #icon></i></button>
+                      <p *ngIf="product.quantity == 0">Currently Out Of Stock</p>
+                      <button routerLink="/productDetails/{{product._id}}"><i class="fa-regular fa-eye"></i></button>
+                    }
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text opacity-75 mb-0">{{ product.title }}</p>
+                  <p class="price fw-bold fs-4 mb-0">
+                    {{ product.price | currency:'USD':'symbol':'1.1-1' }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      }
+      <div *ngIf="isAdmin" class="col-md-3">
+        <div class="card add-product">
+          <button routerLink="/addProduct">Add Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

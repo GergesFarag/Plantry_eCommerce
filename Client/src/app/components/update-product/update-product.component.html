@@ -1,0 +1,120 @@
+<form #myForm="ngForm" (submit)="updateProduct()">
+  <div class="container w-50 text-start my-5">
+    <div class="mb-3">
+      <label for="" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        id="title"
+        aria-describedby="helpId"
+        placeholder=""
+        [(ngModel)]="product.title"
+        #title="ngModel"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        name="description"
+        id="description"
+        aria-describedby="helpId"
+        placeholder=""
+        [(ngModel)]="product.description"
+        #description="ngModel"
+        required=""
+      />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Price</label>
+      <input
+        type="number"
+        step="0.5"
+        min="0"
+        class="form-control"
+        name="price"
+        id="price"
+        aria-describedby="helpId"
+        placeholder=""
+        [(ngModel)]="product.price"
+        #price="ngModel"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Quantity</label>
+      <input
+        type="number"
+        min="1"
+        max="1000"
+        class="form-control"
+        name="quantity"
+        id="quantity"
+        aria-describedby="helpId"
+        placeholder=""
+        [(ngModel)]="product.quantity"
+        #quantity="ngModel"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="category">Select Category : </label>
+      <select
+        name="category"
+        id="category"
+        [(ngModel)]="product.category"
+        #category="ngModel"
+      >
+        <optgroup label="Categories">
+          <ng-container *ngFor="let cat of categories">
+            <option value="{{cat}}">{{ cat }}</option>
+          </ng-container>
+        </optgroup>
+      </select>
+    </div>
+    <div class="booleans d-flex gap-4">
+      <div class="mb-3">
+        <input
+          type="checkbox"
+          name="hasDiscount"
+          id="hasDiscount"
+          aria-describedby="helpId"
+          placeholder=""
+          [(ngModel)]="product.hasDiscount"
+          #hasDiscount="ngModel"
+        />
+        <label for="" class="form-label">Has discount</label>
+      </div>
+      <div class="mb-3">
+        <input
+          type="checkbox"
+          name="isFeatured"
+          id=""
+          aria-describedby="helpId"
+          placeholder=""
+          [(ngModel)]="product.isFeatured"
+          #isFeatured="ngModel"
+        />
+        <label for="" class="form-label">is Featured</label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Image</label>
+      <input
+        type="file"
+        class="form-control"
+        name="imageURL"
+        id=""
+        aria-describedby="helpId"
+        placeholder=""
+        [(ngModel)]="product.imageURL"
+        #imageURL="ngModel"
+        (change)="onFileUpload($event)"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Update Product</button>
+  </div>
+</form>
