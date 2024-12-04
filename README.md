@@ -10,8 +10,7 @@ A full-stack e-commerce application built using the **MEAN** stack (**MongoDB**,
 - **Product Management:** Browse and view product details.
 - **Shopping Cart:** Add/remove products, adjust quantities.
 - **Checkout:** Complete purchases with inventory update.
-- **Pagination:** Efficient navigation through products.
-- **Responsive Design:** Optimized for desktop and mobile.
+- **Admin Dashboard** Mangage Products and Users
 
 ---
 
