@@ -1,4 +1,4 @@
-# E-Commerce Platform
+# Plantry E-Commerce Platform
 
 A full-stack e-commerce application built using the **MEAN** stack (**MongoDB**, **Express**, **Angular**, **Node.js**). The platform allows users to browse products, manage a shopping cart, and complete purchases with real-time inventory updates.
 
@@ -31,4 +31,31 @@ A full-stack e-commerce application built using the **MEAN** stack (**MongoDB**,
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/e-commerce-platform.git
-   cd e-commerce-platform/backend
+   cd e-commerce-platform/Server
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run Server
+   ```
+   nodemon app.js
+   ```
+   ---
+   ### Backend Setup
+
+1. Go to Client:
+   ```bash
+   cd e-commerce-platform/Client
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run Angular
+   ```
+   ng serve -o
+   ```
+   
