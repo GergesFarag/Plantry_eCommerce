@@ -16,7 +16,7 @@ A full-stack e-commerce application built using the **MEAN** stack (**MongoDB**,
 
 ## Technology Stack
 
-- **Frontend:** Angular, RxJS, Bootstap
+- **Frontend:** Angular, RxJS, HTTPclient , Bootstap
 - **Backend:** Node.js, Express, MongoDB, Mongoose
 - **Authentication:** JSON Web Tokens (JWT)
 - **Security** Bcrypt (Password Hashing)
