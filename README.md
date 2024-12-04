@@ -30,8 +30,8 @@ A full-stack e-commerce application built using the **MEAN** stack (**MongoDB**,
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/e-commerce-platform.git
-   cd e-commerce-platform/Server
+   git clone https://github.com/GergesFarag/Plantry_eCommerce.git
+   cd Plantry_eCommerce/Server
    ```
 
 2. Install dependencies:
