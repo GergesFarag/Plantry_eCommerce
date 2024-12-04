@@ -42,16 +42,18 @@ A full-stack e-commerce application built using the **MEAN** stack (**MongoDB**,
    ```
    nodemon app.js
    ```
+   
    ---
-   ### Backend Setup
+   
+   ### Frontend Setup
 
 1. Go to Client:
-   ```bash
+   ```
    cd e-commerce-platform/Client
    ```
 
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 3. Run Angular
